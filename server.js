@@ -5,10 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title:"Article one - UV's",
-    heading:'Article one',
-    date:'Aug 8,2017' ,
+var articles = 
+{
+    articleOne   :{
+        title:"Article one - UV's",
+        heading:'Article one',
+        date:'Aug 8,2017' ,
         content: `
         <p>
                    This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
@@ -19,7 +21,38 @@ var articleOne = {
         <p>
                    This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
         </p>`
+        
+}}
+    articleTwo:{
+        title:"Article two - UV's",
+        heading:'Article two',
+        date:'Aug 8,2017' ,
+        content: `
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>`}
+    articleThree :{
+        title:"Article three - UV's",
+        heading:'Article three',
+        date:'Aug 8,2017' ,
+        content: `
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>
+        <p>
+                   This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
+        </p>`}
 }
+
 function createTemplate (data){
     var title = data.title;
     var date = data.date;
