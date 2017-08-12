@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    articleOne:{
+    'article-one':{
         title:"Article one - UV's",
         heading:'Article one',
         date:'Aug 8,2017' ,
@@ -20,7 +20,7 @@ var articles = {
         <p>
                    This article is about me.This article is about me.This article is about me.This article isabout m.This article is about me.This article is about me.This article is about me.Thisarticle isabout me.
         </p>`},
-    articleTwo:{
+    'article-two':{
         title:"Article two - UV's",
         heading:'Article two',
         date:'Aug 9,2017' ,
@@ -29,7 +29,7 @@ var articles = {
                    This article is about me.
         </p>`
     },
-    articleThree:{
+    'article-three':{
         title:"Article three - UV's",
         heading:'Article three',
         date:'Aug 10,2017' ,
@@ -105,6 +105,6 @@ app.get('/ui/madi.png', function (req, res) {
 // Use 8080 only for local development if you already have apache running on 80
 
 var port = 80;
-app.listen(port, function () {
+app.listen(80, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
